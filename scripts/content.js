@@ -60,7 +60,7 @@ preTags.forEach((block) => {
     `;
     copyButton.onclick = () => {
         navigator.clipboard.writeText(
-            block.innerText.replace(/^\$ /, "").replace(/\n\n\uD83D\uDCCB$/, ""),
+            block.innerText.replaceAll(/(?<=^|\n)\$/g, '').replace(/\n\n\uD83D\uDCCB$/, ""),
         );
     };
     block.appendChild(copyButton);
