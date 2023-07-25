@@ -2,7 +2,7 @@
     "manifest_version": 3,
     "name": "Better Shell",
     "version": "0.0.1",
-    "description": "",
+    "description": "This extension finds <pre> tags and looks for shell commands and makes them non-selectable so that when you are copying them to your terminal, you don't have to worry about removing them from each line. Furthermore, it adds a copy to clipboard button to every <pre> tag as well. Check out the GitHub page for the roadmap, and feel free to shoot me an email at brightenqtompkins@gmail.com if there is a missing feature that you would like added. https://github.com/vantaboard/better-shell",
     "icons": {
         "16": "images/icon-16.png",
         "32": "images/icon-32.png",
