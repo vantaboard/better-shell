@@ -57,7 +57,7 @@ preTags.forEach((block) => {
         }, 150);
 
         navigator.clipboard.writeText(
-            block.innerText.replaceAll(/(?<=^|\n)\$/g, '').replace(/\n\n\uD83D\uDCCB$/, ""),
+            block.innerText.replaceAll(/(?<=^|\n)\$/g, '').replace(/\n{0,2}\uD83D\uDCCB$/, ""),
         );
     };
     block.appendChild(copyButton);
