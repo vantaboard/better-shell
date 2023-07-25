@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Better Shell",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Finds commands on a page and makes the prefix unselectable so you don't accidentally copy it and adds a copy to clipboard button.",
   "icons": {
     "16": "images/icon-16.png",
