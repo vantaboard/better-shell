@@ -6,6 +6,8 @@
 
 </div>
 
+![demonstration](/images/demonstration.png)
+
 ## 👠 Features
 
 - Adds copy to clipboard
