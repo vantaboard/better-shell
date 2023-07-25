@@ -19,10 +19,11 @@ function findShellNode(node) {
 const shellNodes = preTags.map((block) => findShellNode(block)).flat();
 
 shellNodes.forEach((node) => {
-    node.innerHTML = node.innerHTML.replace(
-        /^\$ /,
-        `<span style="user-select: none">$ </span>`,
-    );
+    const span = document.createElement("span");
+    span.style = "user-select: none";
+    node.textContent = node.textContent.replace(/^\$ /, "");
+    span.textContent = "$ ";
+    node.prepend(span);
 });
 
 const copyIcon = "📋";
@@ -42,7 +43,7 @@ preTags.forEach((block) => {
             : "white";
 
     const copyButton = document.createElement("button");
-    copyButton.innerHTML = copyIcon;
+    copyButton.textContent = copyIcon;
     copyButton.style = `
         color: ${buttonColor};
     `;
