@@ -44,21 +44,17 @@ preTags.forEach((block) => {
     const copyButton = document.createElement("button");
     copyButton.innerHTML = copyIcon;
     copyButton.style = `
-        position: absolute;
-        top: 5px;
-        right: 5px;
-        padding: 0;
-        margin: 0;
-        text-shadow: rgba(0, 0, 0, 0.45) 1px 1px 3px;
-        z-index: 1;
-        border: none;
-        background: none;
         color: ${buttonColor};
-        font-size: 1.5rem;
-        cursor: pointer;
-        outline: none;
     `;
+    copyButton.className = "copy-btn";
+
     copyButton.onclick = () => {
+        copyButton.className = "copy-btn clicked";
+
+        setTimeout(() => {
+            copyButton.className = "copy-btn";
+        }, 150);
+
         navigator.clipboard.writeText(
             block.innerText.replaceAll(/(?<=^|\n)\$/g, '').replace(/\n\n\uD83D\uDCCB$/, ""),
         );
