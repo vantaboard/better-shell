@@ -8,7 +8,8 @@ fi
 rm build.zip
 mkdir -p build
 cp manifest.json build/
-cp -r images build/
+mkdir -p build/images
+cp -r images/icon*.png build/images/
 cp -r scripts build/
 cp -r styles build/
 cd build || exit
